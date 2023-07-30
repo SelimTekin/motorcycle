@@ -28,14 +28,14 @@ class Curl{
             echo $error;
         
             curl_close($ch);
-        
+            
             $decodeDatas = json_decode($result, true); // true ile dizi olarak kullanabiliyoruz. Yoksa std ObjectClass olur.
-            $datas = $decodeDatas;
+
+            if(empty($decodeDatas)){
+                return header("Location: ../view/index.php");
+            }
         
-            // echo "Data count: " . count(json_decode($result));
-            // echo "<pre>";
-            // print_r(json_decode($result));
-            // echo "</pre>";
+            $datas = $decodeDatas;
 
             return $datas;
         

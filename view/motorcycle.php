@@ -1,3 +1,8 @@
+<?php
+    echo "<pre>";
+    print_r($datas);
+    echo "</pre>";
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 

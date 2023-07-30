@@ -21,7 +21,7 @@
             $dataSayisi = $sorgu->rowCount();
 
             if($dataSayisi <= 0){
-                include("Curl.php");
+                include("../controller/Curl.php");
 
                 $curlDatas = $curl->getCurlData($make);
 
@@ -67,13 +67,13 @@
                         isset($curlData["rear_tire"]) ? $curlData["rear_tire"] : ""
                     ]);
 
-                    $datas = $sorgu->fetch(PDO::FETCH_ASSOC);
+                    $datas = $sorgu->fetchAll(PDO::FETCH_ASSOC);
 
                 }
               
             }
 
-            $datas = $sorgu->fetch(PDO::FETCH_ASSOC);
+            $datas = $sorgu->fetchAll(PDO::FETCH_ASSOC);
 
             return $datas;
 
