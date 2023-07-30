@@ -99,7 +99,7 @@
                         <nav class="header__menu">
                             <ul>
                                 <li class="active"><a href="./index.html">Home</a></li>
-                                <li><a href="./car.html">Cars</a></li>
+                                <li><a href="./motorcyle.php">Motorcycles</a></li>
                                 <li><a href="./blog.html">Blog</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="dropdown">
@@ -116,7 +116,6 @@
                             <div class="header__nav__widget__btn">
                                 <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
                             </div>
-                            <a href="#" class="primary-btn">Add Car</a>
                         </div>
                     </div>
                 </div>
@@ -129,21 +128,19 @@
     <!-- Header Section End -->
 
     <!-- Hero Section Begin -->
-    <section class="hero spad set-bg" data-setbg="img/scrambler.jpg">
+    <section class="hero spad set-bg" data-setbg="img/suzuki-hayabusa-2021.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
                     <div class="hero__text">
                         <div class="hero__text__title">
-                            <span>FIND YOUR DREAM CAR</span>
                             <h2>Porsche Cayenne S</h2>
                         </div>
                         <div class="hero__text__price">
                             <div class="car-model">Model 2019</div>
                             <h2>$399<span>/Month</span></h2>
                         </div>
-                        <a href="#" class="primary-btn"><img src="img/wheel.png" alt=""> Test Drive</a>
-                        <a href="#" class="primary-btn more-btn">Learn More</a>
+                        <a href="#" class="primary-btn more-btn bg-dark">Learn More</a>
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -159,7 +156,7 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <div class="hero__tab__form">
-                                    <h2>Find Your Dream Car</h2>
+                                    <h2>Find Your Dream Motor</h2>
                                     <form>
                                         <div class="select-list">
                                             <div class="select-list-item">
@@ -179,10 +176,10 @@
                                                 <select>
                                                     <option data-display=" ">Select Brand</option>
                                                     <option value="">Honda</option>
-                                                    <option value="">Audi</option>
-                                                    <option value="">Bentley</option>
+                                                    <option value="">Yamaha</option>
+                                                    <option value="">Kawasaki</option>
                                                     <option value="">BMW</option>
-                                                    <option value="">Bugatti</option>
+                                                    <option value="">Ducati</option>
                                                 </select>
                                             </div>
                                             <div class="select-list-item">
@@ -194,28 +191,9 @@
                                                     <option value="">AVENTADOR</option>
                                                 </select>
                                             </div>
-                                            <div class="select-list-item">
-                                                <p>Select Mileage</p>
-                                                <select>
-                                                    <option data-display=" ">Select Mileage</option>
-                                                    <option value="">27</option>
-                                                    <option value="">25</option>
-                                                    <option value="">15</option>
-                                                    <option value="">10</option>
-                                                </select>
-                                            </div>
+                                           
                                         </div>
-                                        <div class="car-price">
-                                            <p>Price Range:</p>
-                                            <div class="price-range-wrap">
-                                                <div class="price-range"></div>
-                                                <div class="range-slider">
-                                                    <div class="price-input">
-                                                        <input type="text" id="amount">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                       
                                         <button type="submit" class="site-btn">Searching</button>
                                     </form>
                                 </div>
@@ -257,28 +235,9 @@
                                                     <option value="">AVENTADOR</option>
                                                 </select>
                                             </div>
-                                            <div class="select-list-item">
-                                                <p>Select Mileage</p>
-                                                <select>
-                                                    <option data-display=" ">Select Mileage</option>
-                                                    <option value="">27</option>
-                                                    <option value="">25</option>
-                                                    <option value="">15</option>
-                                                    <option value="">10</option>
-                                                </select>
-                                            </div>
+                                           
                                         </div>
-                                        <div class="car-price">
-                                            <p>Price Range:</p>
-                                            <div class="price-range-wrap">
-                                                <div class="price-range"></div>
-                                                <div class="range-slider">
-                                                    <div class="price-input">
-                                                        <input type="text" id="amount">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                       
                                         <button type="submit" class="site-btn">Searching</button>
                                     </form>
                                 </div>
@@ -345,85 +304,6 @@
     </section>
     <!-- Services Section End -->
 
-    <!-- Feature Section Begin -->
-    <section class="feature spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="feature__text">
-                        <div class="section-title">
-                            <span>Our Feature</span>
-                            <h2>We Are a Trusted Name In Auto</h2>
-                        </div>
-                        <div class="feature__text__desc">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                                viverra maecenas accumsan lacus vel facilisis.</p>
-                        </div>
-                        <div class="feature__text__btn">
-                            <a href="#" class="primary-btn">About Us</a>
-                            <a href="#" class="primary-btn partner-btn">Our Partners</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 offset-lg-4">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-4 col-6">
-                            <div class="feature__item">
-                                <div class="feature__item__icon">
-                                    <img src="img/feature/feature-1.png" alt="">
-                                </div>
-                                <h6>Engine</h6>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-4 col-6">
-                            <div class="feature__item">
-                                <div class="feature__item__icon">
-                                    <img src="img/feature/feature-2.png" alt="">
-                                </div>
-                                <h6>Turbo</h6>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-4 col-6">
-                            <div class="feature__item">
-                                <div class="feature__item__icon">
-                                    <img src="img/feature/feature-3.png" alt="">
-                                </div>
-                                <h6>Colling</h6>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-4 col-6">
-                            <div class="feature__item">
-                                <div class="feature__item__icon">
-                                    <img src="img/feature/feature-4.png" alt="">
-                                </div>
-                                <h6>Suspension</h6>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-4 col-6">
-                            <div class="feature__item">
-                                <div class="feature__item__icon">
-                                    <img src="img/feature/feature-5.png" alt="">
-                                </div>
-                                <h6>Electrical</h6>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-4 col-6">
-                            <div class="feature__item">
-                                <div class="feature__item__icon">
-                                    <img src="img/feature/feature-6.png" alt="">
-                                </div>
-                                <h6>Brakes</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Feature Section End -->
 
     <!-- Car Section Begin -->
     <section class="car spad">
@@ -431,23 +311,18 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <span>Our Car</span>
-                        <h2>Best Vehicle Offers</h2>
+                        <h2>Best Motorcycles</h2>
                     </div>
                     <ul class="filter__controls">
                         <li class="active" data-filter="*">Most Researched</li>
-                        <li data-filter=".sale">Latest on sale</li>
                     </ul>
                 </div>
             </div>
             <div class="row car-filter">
                 <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
+                        <div class="car__item">
                             <img src="img/cars/car-1.jpg" alt="">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-6.jpg" alt="">
-                            <img src="img/cars/car-3.jpg" alt="">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
@@ -460,19 +335,16 @@
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option">For Rent</span>
-                                <h6>$218<span>/Month</span></h6>
+                            <a href="#" class="primary-btn">About</a>
+
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
                     <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
+                        <div class="car__item">
                             <img src="img/cars/car-2.jpg" alt="">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-6.jpg" alt="">
-                            <img src="img/cars/car-4.jpg" alt="">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
@@ -485,19 +357,16 @@
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option sale">For Sale</span>
-                                <h6>$73,900</h6>
+                            <a href="#" class="primary-btn">About</a>
+
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
+                        <div class="car__item">
                             <img src="img/cars/car-3.jpg" alt="">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-6.jpg" alt="">
-                            <img src="img/cars/car-5.jpg" alt="">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
@@ -510,19 +379,15 @@
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option">For Rent</span>
-                                <h6>$299<span>/Month</span></h6>
+                            <a href="#" class="primary-btn">About</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
                     <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
+                        <div class="car__item">
                             <img src="img/cars/car-4.jpg" alt="">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-2.jpg" alt="">
-                            <img src="img/cars/car-1.jpg" alt="">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
@@ -535,19 +400,16 @@
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option sale">For Sale</span>
-                                <h6>$120,000</h6>
+                            <a href="#" class="primary-btn">About</a>
+
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
+                        <div class="car__item">
                             <img src="img/cars/car-5.jpg" alt="">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-7.jpg" alt="">
-                            <img src="img/cars/car-2.jpg" alt="">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
@@ -560,19 +422,16 @@
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option">For Rent</span>
-                                <h6>$319<span>/Month</span></h6>
+                            <a href="#" class="primary-btn">About</a>
+
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
                     <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
+                        <div class="car__item">
                             <img src="img/cars/car-6.jpg" alt="">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-3.jpg" alt="">
-                            <img src="img/cars/car-1.jpg" alt="">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
@@ -585,19 +444,16 @@
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option sale">For Sale</span>
-                                <h6>$730,900</h6>
+                            <a href="#" class="primary-btn">About</a>
+
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
+                        <div class="car__item">
                             <img src="img/cars/car-7.jpg" alt="">
-                            <img src="img/cars/car-2.jpg" alt="">
-                            <img src="img/cars/car-4.jpg" alt="">
-                            <img src="img/cars/car-1.jpg" alt="">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
@@ -610,19 +466,16 @@
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option">For Rent</span>
-                                <h6>$422<span>/Month</span></h6>
+                            <a href="#" class="primary-btn">About</a>
+
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
+                        <div class="car__item">
                             <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-3.jpg" alt="">
-                            <img src="img/cars/car-5.jpg" alt="">
-                            <img src="img/cars/car-2.jpg" alt="">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
@@ -635,8 +488,8 @@
                                 </ul>
                             </div>
                             <div class="car__item__price">
-                                <span class="car-option">For Rent</span>
-                                <h6>$322<span>/Month</span></h6>
+                            <a href="#" class="primary-btn">About</a>
+
                             </div>
                         </div>
                     </div>
@@ -752,27 +605,6 @@
     </section> -->
     <!-- Latest Blog Section End -->
 
-    <!-- Cta Begin -->
-    <div class="cta">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="cta__item set-bg" data-setbg="img/cta/cta-1.jpg">
-                        <h4>Do You Want To Buy A Car</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="cta__item set-bg" data-setbg="img/cta/cta-2.jpg">
-                        <h4>Do You Want To Rent A Car</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Cta End -->
-
     <!-- Footer Section Begin -->
     <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
         <div class="container">
@@ -780,15 +612,10 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="footer__contact__title">
-                            <h2>Contact Us Now!</h2>
+                            <h2>Contact Us</h2>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="footer__contact__option">
-                            <div class="option__item"><i class="fa fa-phone"></i> (+12) 345 678 910</div>
-                            <div class="option__item email"><i class="fa fa-envelope-o"></i> Colorlib@gmail.com</div>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
             <div class="row">
@@ -800,32 +627,20 @@
                         <p>Any questions? Let us know in store at 625 Gloria Union, California, United Stated or call us
                             on (+1) 96 123 8888</p>
                         <div class="footer__social">
-                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
                             <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
                             <a href="#" class="google"><i class="fa fa-google"></i></a>
-                            <a href="#" class="skype"><i class="fa fa-skype"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 offset-lg-1 col-md-3">
-                    <div class="footer__widget">
-                        <h5>Infomation</h5>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Purchase</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Payemnt</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Shipping</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Return</a></li>
-                        </ul>
-                    </div>
-                </div>
+               
                 <div class="col-lg-2 col-md-3">
                     <div class="footer__widget">
                         <h5>Infomation</h5>
                         <ul>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Hatchback</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Sedan</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> SUV</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Crossover</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Sport</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Enduro</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Scooter</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Touring</a></li>
                         </ul>
                     </div>
                 </div>
@@ -833,16 +648,16 @@
                     <div class="footer__brand">
                         <h5>Top Brand</h5>
                         <ul>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Abarth</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Acura</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Alfa Romeo</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Audi</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Honda</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Yamaha</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Kawasaki</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Suzuki</a></li>
                         </ul>
                         <ul>
                             <li><a href="#"><i class="fa fa-angle-right"></i> BMW</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Chevrolet</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Ferrari</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Honda</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Ktm</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Ducati</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Harley-Davidson</a></li>
                         </ul>
                     </div>
                 </div>
