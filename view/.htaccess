@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteRule ^SearchController$ ../controller/SearchController.php [L,NC]
+
+RewriteRule ^motorcycle$ ../view/motorcycle.php [L,NC]
