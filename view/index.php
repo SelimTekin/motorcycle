@@ -129,7 +129,7 @@
     <!-- Header Section End -->
 
     <!-- Hero Section Begin -->
-    <section class="hero spad set-bg" data-setbg="img/scrambler.jpg">
+    <section class="hero spad set-bg" data-setbg="img/suzuki-hayabusa-2021.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
