@@ -178,7 +178,7 @@
                                                 <p>Select Brand</p>
                                                 <select>
                                                     <option data-display=" ">Select Brand</option>
-                                                    <option value="">Acura</option>
+                                                    <option value="">Honda</option>
                                                     <option value="">Audi</option>
                                                     <option value="">Bentley</option>
                                                     <option value="">BMW</option>
