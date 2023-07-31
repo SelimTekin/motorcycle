@@ -1,7 +1,6 @@
 <?php
 
     include("../Curl/Curl.php");
-    include("../helpers/tools_helper.php");
     
     class MotorcycleModel extends Curl{
 
@@ -17,7 +16,6 @@
         }
 
         public function getData($table="", $make=""){
-
             $sorgu = $this->db->prepare("SELECT * FROM $table WHERE make='$make'");
             $sorgu->execute();
             $dataSayisi = $sorgu->rowCount();
@@ -83,6 +81,21 @@
         public function getAllData($table=""){
 
             $sorgu = $this->db->prepare("SELECT * FROM $table");
+            $sorgu->execute();
+            $dataSayisi = $sorgu->rowCount();
+            $data = $sorgu->fetchAll(PDO::FETCH_ASSOC);
+
+            if($dataSayisi > 0){
+                return $data;
+            }
+            else{
+                die();
+            }
+
+        }
+
+        public function getRandomData($table=""){
+            $sorgu = $this->db->prepare("SELECT * FROM $table ORDER BY RAND() LIMIT 9");
             $sorgu->execute();
             $dataSayisi = $sorgu->rowCount();
             $data = $sorgu->fetchAll(PDO::FETCH_ASSOC);

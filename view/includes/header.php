@@ -37,7 +37,7 @@
                         <nav class="header__menu">
                             <ul>
                                 <li class="active"><a href="./index.php">Home</a></li>
-                                <li><a href="./motor.php">Motors</a></li>
+                                <li><a href="../controller/SearchController.php">Motors</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="dropdown">
                                         <li><a href="./about.php">About Us</a></li>

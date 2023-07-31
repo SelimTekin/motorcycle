@@ -1,5 +1,10 @@
+<?php
+    // echo "<pre>";
+    // print_r($datas);
+    // echo "</pre>";die();
+?>
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -29,6 +34,7 @@
     <div id="preloder">
         <div class="loader"></div>
     </div>
+
 
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas-menu-overlay"></div>
@@ -69,7 +75,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2 >Motorcycle Listing</h2>
+                        <h2>Motorcycle Listing</h2>
                         <div class="breadcrumb__links">
                             <a href="./index.php"><i class="fa fa-home"></i> Home</a>
                             <span class="text-white">Motorcycle</span>
@@ -90,7 +96,7 @@
                         <div class="car__search">
                             <h5>Page Search</h5>
                             <form action="#">
-                                <input type="text" >
+                                <input type="text">
                                 <button type="submit"><i class="fa fa-search"></i></button>
                             </form>
                         </div>
@@ -167,7 +173,7 @@
                                     <option value="">Air</option>
                                     <option value="">Liquid</option>
                                 </select>
-                                
+
                                 <select>
                                     <option value="">Starter</option>
                                     <option value="">Electric</option>
@@ -175,7 +181,7 @@
                                     <option value="">Black</option>
                                     <option value="">Yellow</option>
                                 </select>
-                        
+
                                 <div class="car__filter__btn">
                                     <button type="submit" class="site-btn">Reset FIlter</button>
                                 </div>
@@ -208,196 +214,36 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <?php foreach($datas as $data){ ?>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                    <img src="../images/motor-icon.svg" alt="">
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date"><?php echo donusumleriGeriDondur($data["year"]); ?></div>
-                                        <h5><a href="#"><?php echo donusumleriGeriDondur($data["make"]); ?> <?php echo donusumleriGeriDondur($data["model"]); ?></a></h5>
-                                        <ul>
-                                            <li><span>35,000</span> mi</li>
-                                            <li>Auto</li>
-                                            <li><span>700</span> hp</li>
-                                        </ul>
-                                    </div>
-                                    <div class="car__item__price text-center">
-                                        <a href="#" class="primary-btn">Details</a>
+                        <div class="row">
+                            <?php foreach ($datas as $data) { ?>
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="car__item">
+                                        <img src="../images/motor-icon.svg" alt="">
+                                        <div class="car__item__text">
+                                            <div class="car__item__text__inner">
+                                                <div class="label-date"><?php echo donusumleriGeriDondur($data["year"]); ?></div>
+                                                <h5><a href="#"><?php echo donusumleriGeriDondur($data["make"]) . " ". donusumleriGeriDondur($data["model"]); ?></a></h5>
+                                                <ul>
+                                                    <li><?php echo donusumleriGeriDondur($data["type"]); ?></li>
+                                                </ul>
+                                            </div>
+                                            <div class="car__item__price text-center">
+                                                <a href="#" class="primary-btn">Details</a>
 
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            <?php } ?>
                         </div>
-                        <?php } ?>
-                        <!-- <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                    <img src="../images/cars/car-2.jpg" alt="">
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">2020</div>
-                                        <h5><a href="#">Toyota camry asv50l-jeteku</a></h5>
-                                        <ul>
-                                            <li><span>35,000</span> mi</li>
-                                            <li>Auto</li>
-                                            <li><span>700</span> hp</li>
-                                        </ul>
-                                    </div>
-                                    <div class="car__item__price text-center">
-                                        <a href="#" class="primary-btn">About</a>
 
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                    <img src="../images/cars/car-3.jpg" alt="">
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">2017</div>
-                                        <h5><a href="#">Bmw s1000rr 2019 m</a></h5>
-                                        <ul>
-                                            <li><span>35,000</span> mi</li>
-                                            <li>Auto</li>
-                                            <li><span>700</span> hp</li>
-                                        </ul>
-                                    </div>
-                                    <div class="car__item__price text-center">
-                                        <a href="#" class="primary-btn">About</a>
-
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="pagination__option">
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#"><span class="arrow_carrot-2right"></span></a>
                         </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                    <img src="../images/cars/car-5.jpg" alt="">
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">2018</div>
-                                        <h5><a href="#">Audi q8 2020</a></h5>
-                                        <ul>
-                                            <li><span>35,000</span> mi</li>
-                                            <li>Auto</li>
-                                            <li><span>700</span> hp</li>
-                                        </ul>
-                                    </div>
-                                    <div class="car__item__price text-center">
-                                        <a href="#" class="primary-btn">About</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                    <img src="../images/cars/car-6.jpg" alt="">
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">2016</div>
-                                        <h5><a href="#">Mustang shelby gt500</a></h5>
-                                        <ul>
-                                            <li><span>35,000</span> mi</li>
-                                            <li>Auto</li>
-                                            <li><span>700</span> hp</li>
-                                        </ul>
-                                    </div>
-                                    <div class="car__item__price text-center">
-                                        <a href="#" class="primary-btn">About</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                    <img src="../images/cars/car-4.jpg" alt="">
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">2019</div>
-                                        <h5><a href="#">Lamborghini huracan evo</a></h5>
-                                        <ul>
-                                            <li><span>35,000</span> mi</li>
-                                            <li>Auto</li>
-                                            <li><span>700</span> hp</li>
-                                        </ul>
-                                    </div>
-                                    <div class="car__item__price text-center">
-                                        <a href="#" class="primary-btn">About</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                    <img src="../images/cars/car-7.jpg" alt="">
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">2020</div>
-                                        <h5><a href="#">Lamborghini huracan evo</a></h5>
-                                        <ul>
-                                            <li><span>35,000</span> mi</li>
-                                            <li>Auto</li>
-                                            <li><span>700</span> hp</li>
-                                        </ul>
-                                    </div>
-                                    <div class="car__item__price text-center">
-                                        <a href="#" class="primary-btn">About</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                    <img src="../images/cars/car-8.jpg" alt="">
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">2017</div>
-                                        <h5><a href="#">Porsche cayenne turbo s</a></h5>
-                                        <ul>
-                                            <li><span>35,000</span> mi</li>
-                                            <li>Auto</li>
-                                            <li><span>700</span> hp</li>
-                                        </ul>
-                                    </div>
-                                    <div class="car__item__price text-center">
-                                        <a href="#" class="primary-btn">About</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                    <img src="../images/cars/car-8.jpg" alt="">
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">2020</div>
-                                        <h5><a href="#">Toyota camry asv50l-jeteku</a></h5>
-                                        <ul>
-                                            <li><span>35,000</span> mi</li>
-                                            <li>Auto</li>
-                                            <li><span>700</span> hp</li>
-                                        </ul>
-                                    </div>
-                                    <div class="car__item__price text-center">
-                                        <a href="#" class="primary-btn">About</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                    </div>
-                    <div class="pagination__option">
-                        <a href="#" class="active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#"><span class="arrow_carrot-2right"></span></a>
-                    </div>
                 </div>
             </div>
         </div>
