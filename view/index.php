@@ -13,15 +13,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
 </head>
 
 <body>
@@ -39,7 +39,7 @@
             <a href="#" class="primary-btn">Add Car</a>
         </div>
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+            <a href="./index.html"><img src="../images/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <ul class="offcanvas__widget__add">
@@ -91,7 +91,7 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="./index.html"><img src="../images/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
@@ -127,7 +127,7 @@
     <!-- Header Section End -->
 
     <!-- Hero Section Begin -->
-    <section class="hero spad set-bg" data-setbg="img/scrambler.jpg">
+    <section class="hero spad set-bg" data-setbg="../images/scrambler.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
@@ -140,7 +140,7 @@
                             <div class="car-model">Model 2019</div>
                             <h2>$399<span>/Month</span></h2>
                         </div>
-                        <a href="#" class="primary-btn"><img src="img/wheel.png" alt=""> Test Drive</a>
+                        <a href="#" class="primary-btn"><img src="../images/wheel.png" alt=""> Test Drive</a>
                         <a href="#" class="primary-btn more-btn">Learn More</a>
                     </div>
                 </div>
@@ -304,7 +304,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="services__item">
-                        <img src="img/services/services-1.png" alt="">
+                        <img src="../images/services/services-1.png" alt="">
                         <h5>Rental A Cars</h5>
                         <p>Consectetur adipiscing elit incididunt ut labore et dolore magna aliqua. Risus commodo
                             viverra maecenas.</p>
@@ -313,7 +313,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="services__item">
-                        <img src="img/services/services-2.png" alt="">
+                        <img src="../images/services/services-2.png" alt="">
                         <h5>Buying A Cars</h5>
                         <p>Consectetur adipiscing elit incididunt ut labore et dolore magna aliqua. Risus commodo
                             viverra maecenas.</p>
@@ -322,7 +322,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="services__item">
-                        <img src="img/services/services-3.png" alt="">
+                        <img src="../images/services/services-3.png" alt="">
                         <h5>Car Maintenance</h5>
                         <p>Consectetur adipiscing elit incididunt ut labore et dolore magna aliqua. Risus commodo
                             viverra maecenas.</p>
@@ -331,7 +331,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="services__item">
-                        <img src="img/services/services-4.png" alt="">
+                        <img src="../images/services/services-4.png" alt="">
                         <h5>Support 24/7</h5>
                         <p>Consectetur adipiscing elit incididunt ut labore et dolore magna aliqua. Risus commodo
                             viverra maecenas.</p>
@@ -371,7 +371,7 @@
                         <div class="col-lg-6 col-md-4 col-6">
                             <div class="feature__item">
                                 <div class="feature__item__icon">
-                                    <img src="img/feature/feature-1.png" alt="">
+                                    <img src="../images/feature/feature-1.png" alt="">
                                 </div>
                                 <h6>Engine</h6>
                             </div>
@@ -379,7 +379,7 @@
                         <div class="col-lg-6 col-md-4 col-6">
                             <div class="feature__item">
                                 <div class="feature__item__icon">
-                                    <img src="img/feature/feature-2.png" alt="">
+                                    <img src="../images/feature/feature-2.png" alt="">
                                 </div>
                                 <h6>Turbo</h6>
                             </div>
@@ -387,7 +387,7 @@
                         <div class="col-lg-6 col-md-4 col-6">
                             <div class="feature__item">
                                 <div class="feature__item__icon">
-                                    <img src="img/feature/feature-3.png" alt="">
+                                    <img src="../images/feature/feature-3.png" alt="">
                                 </div>
                                 <h6>Colling</h6>
                             </div>
@@ -395,7 +395,7 @@
                         <div class="col-lg-6 col-md-4 col-6">
                             <div class="feature__item">
                                 <div class="feature__item__icon">
-                                    <img src="img/feature/feature-4.png" alt="">
+                                    <img src="../images/feature/feature-4.png" alt="">
                                 </div>
                                 <h6>Suspension</h6>
                             </div>
@@ -403,7 +403,7 @@
                         <div class="col-lg-6 col-md-4 col-6">
                             <div class="feature__item">
                                 <div class="feature__item__icon">
-                                    <img src="img/feature/feature-5.png" alt="">
+                                    <img src="../images/feature/feature-5.png" alt="">
                                 </div>
                                 <h6>Electrical</h6>
                             </div>
@@ -411,7 +411,7 @@
                         <div class="col-lg-6 col-md-4 col-6">
                             <div class="feature__item">
                                 <div class="feature__item__icon">
-                                    <img src="img/feature/feature-6.png" alt="">
+                                    <img src="../images/feature/feature-6.png" alt="">
                                 </div>
                                 <h6>Brakes</h6>
                             </div>
@@ -442,10 +442,10 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="img/cars/car-1.jpg" alt="">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-6.jpg" alt="">
-                            <img src="img/cars/car-3.jpg" alt="">
+                            <img src="../images/cars/car-1.jpg" alt="">
+                            <img src="../images/cars/car-8.jpg" alt="">
+                            <img src="../images/cars/car-6.jpg" alt="">
+                            <img src="../images/cars/car-3.jpg" alt="">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
@@ -467,10 +467,10 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="img/cars/car-2.jpg" alt="">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-6.jpg" alt="">
-                            <img src="img/cars/car-4.jpg" alt="">
+                            <img src="../images/cars/car-2.jpg" alt="">
+                            <img src="../images/cars/car-8.jpg" alt="">
+                            <img src="../images/cars/car-6.jpg" alt="">
+                            <img src="../images/cars/car-4.jpg" alt="">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
@@ -492,10 +492,10 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="img/cars/car-3.jpg" alt="">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-6.jpg" alt="">
-                            <img src="img/cars/car-5.jpg" alt="">
+                            <img src="../images/cars/car-3.jpg" alt="">
+                            <img src="../images/cars/car-8.jpg" alt="">
+                            <img src="../images/cars/car-6.jpg" alt="">
+                            <img src="../images/cars/car-5.jpg" alt="">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
@@ -517,10 +517,10 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="img/cars/car-4.jpg" alt="">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-2.jpg" alt="">
-                            <img src="img/cars/car-1.jpg" alt="">
+                            <img src="../images/cars/car-4.jpg" alt="">
+                            <img src="../images/cars/car-8.jpg" alt="">
+                            <img src="../images/cars/car-2.jpg" alt="">
+                            <img src="../images/cars/car-1.jpg" alt="">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
@@ -542,10 +542,10 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="img/cars/car-5.jpg" alt="">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-7.jpg" alt="">
-                            <img src="img/cars/car-2.jpg" alt="">
+                            <img src="../images/cars/car-5.jpg" alt="">
+                            <img src="../images/cars/car-8.jpg" alt="">
+                            <img src="../images/cars/car-7.jpg" alt="">
+                            <img src="../images/cars/car-2.jpg" alt="">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
@@ -567,10 +567,10 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="img/cars/car-6.jpg" alt="">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-3.jpg" alt="">
-                            <img src="img/cars/car-1.jpg" alt="">
+                            <img src="../images/cars/car-6.jpg" alt="">
+                            <img src="../images/cars/car-8.jpg" alt="">
+                            <img src="../images/cars/car-3.jpg" alt="">
+                            <img src="../images/cars/car-1.jpg" alt="">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
@@ -592,10 +592,10 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="img/cars/car-7.jpg" alt="">
-                            <img src="img/cars/car-2.jpg" alt="">
-                            <img src="img/cars/car-4.jpg" alt="">
-                            <img src="img/cars/car-1.jpg" alt="">
+                            <img src="../images/cars/car-7.jpg" alt="">
+                            <img src="../images/cars/car-2.jpg" alt="">
+                            <img src="../images/cars/car-4.jpg" alt="">
+                            <img src="../images/cars/car-1.jpg" alt="">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
@@ -617,10 +617,10 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix">
                     <div class="car__item">
                         <div class="car__item__pic__slider owl-carousel">
-                            <img src="img/cars/car-8.jpg" alt="">
-                            <img src="img/cars/car-3.jpg" alt="">
-                            <img src="img/cars/car-5.jpg" alt="">
-                            <img src="img/cars/car-2.jpg" alt="">
+                            <img src="../images/cars/car-8.jpg" alt="">
+                            <img src="../images/cars/car-3.jpg" alt="">
+                            <img src="../images/cars/car-5.jpg" alt="">
+                            <img src="../images/cars/car-2.jpg" alt="">
                         </div>
                         <div class="car__item__text">
                             <div class="car__item__text__inner">
@@ -670,7 +670,7 @@
             </div>
         </div>
         <div class="chooseus__video set-bg">
-            <img src="img/chooseus-video.png" alt="">
+            <img src="../images/chooseus-video.png" alt="">
             <a href="https://www.youtube.com/watch?v=Xd0Ok-MkqoE"
                 class="play-btn video-popup"><i class="fa fa-play"></i></a>
         </div>
@@ -693,7 +693,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="latest__blog__item">
-                        <div class="latest__blog__item__pic set-bg" data-setbg="img/latest-blog/lb-1.jpg">
+                        <div class="latest__blog__item__pic set-bg" data-setbg="../images/latest-blog/lb-1.jpg">
                             <ul>
                                 <li>By Polly Williams</li>
                                 <li>Dec 19, 2018</li>
@@ -711,7 +711,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="latest__blog__item">
-                        <div class="latest__blog__item__pic set-bg" data-setbg="img/latest-blog/lb-2.jpg">
+                        <div class="latest__blog__item__pic set-bg" data-setbg="../images/latest-blog/lb-2.jpg">
                             <ul>
                                 <li>By Mattie Ramirez</li>
                                 <li>Dec 19, 2018</li>
@@ -729,7 +729,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="latest__blog__item">
-                        <div class="latest__blog__item__pic set-bg" data-setbg="img/latest-blog/lb-3.jpg">
+                        <div class="latest__blog__item__pic set-bg" data-setbg="../images/latest-blog/lb-3.jpg">
                             <ul>
                                 <li>By Nicholas Brewer</li>
                                 <li>Dec 19, 2018</li>
@@ -755,13 +755,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6">
-                    <div class="cta__item set-bg" data-setbg="img/cta/cta-1.jpg">
+                    <div class="cta__item set-bg" data-setbg="../images/cta/cta-1.jpg">
                         <h4>Do You Want To Buy A Car</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
-                    <div class="cta__item set-bg" data-setbg="img/cta/cta-2.jpg">
+                    <div class="cta__item set-bg" data-setbg="../images/cta/cta-2.jpg">
                         <h4>Do You Want To Rent A Car</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
                     </div>
@@ -772,7 +772,7 @@
     <!-- Cta End -->
 
     <!-- Footer Section Begin -->
-    <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+    <footer class="footer set-bg" data-setbg="../images/footer-bg.jpg">
         <div class="container">
             <div class="footer__contact">
                 <div class="row">
@@ -793,7 +793,7 @@
                 <div class="col-lg-4 col-md-4">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="#"><img src="img/istock-1.jpg" alt=""></a>
+                            <a href="#"><img src="../images/istock-1.jpg" alt=""></a>
                         </div>
                         <p>Any questions? Let us know in store at 625 Gloria Union, California, United Stated or call us
                             on (+1) 96 123 8888</p>
@@ -866,15 +866,15 @@
     <!-- Search End -->
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.nice-select.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="../assets/js/mixitup.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.js"></script>
+    <script src="../assets/js/owl.carousel.min.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>
