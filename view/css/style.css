@@ -315,6 +315,30 @@ ol {
 	justify-content: center;
 }
 
+i.fa-search{
+	font-weight: 600;
+	font-size: 20px;
+	animation: changeColor 4s linear 0s infinite alternate none running;
+}
+
+@keyframes changeColor {
+	0%{
+		color: blue;
+	}
+	25%{
+		color: green;
+	}
+	50%{
+		color: yellow;
+	}
+	75%{
+		color: purple;
+	}
+	100%{
+		color: red;
+	}
+}
+
 /*---------------------
   Header
 -----------------------*/

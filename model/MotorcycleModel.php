@@ -1,7 +1,8 @@
 <?php
 
-
-    class MotorcycleModel{
+    include("../Curl/Curl.php");
+    
+    class MotorcycleModel extends Curl{
 
         public $db = "";
 
@@ -21,9 +22,8 @@
             $dataSayisi = $sorgu->rowCount();
 
             if($dataSayisi <= 0){
-                include("../controller/Curl.php");
 
-                $curlDatas = $curl->getCurlData($make);
+                $curlDatas = $this->getCurlData($make);
 
                 foreach($curlDatas as $curlData){
                     $insert = $this->db->prepare("INSERT INTO $table (make, model, year, type, front_suspension, rear_suspension, front_brakes, rear_brakes, frame, dry_weight, seat_weight, total_height, total_length, total_width, ground_clearance, wheelbase, fuel_system, fuel_control, fuel_capacity, gearbox, transmission, clutch, displacement, engine, power, torque, compression, bore_stroke, valves_per_cylinder, ignition, lubrication, cooling, starter, front_wheel_travel, rear_wheel_travel, front_tire, rear_tire) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
@@ -95,7 +95,5 @@
 
         }
     }
-
-    $motorcycleModel = new MotorcycleModel();
 
 ?>

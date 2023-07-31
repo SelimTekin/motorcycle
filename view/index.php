@@ -99,12 +99,11 @@
                         <nav class="header__menu">
                             <ul>
                                 <li class="active"><a href="./index.html">Home</a></li>
-                                <li><a href="./car.html">Cars</a></li>
-                                <li><a href="./blog.html">Blog</a></li>
+                                <li><a href="./car.html">Motors</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="dropdown">
                                         <li><a href="./about.html">About Us</a></li>
-                                        <li><a href="./car-details.html">Car Details</a></li>
+                                        <li><a href="./car-details.html">Motor Details</a></li>
                                         <li><a href="./blog-details.html">Blog Details</a></li>
                                     </ul>
                                 </li>
@@ -116,7 +115,6 @@
                             <div class="header__nav__widget__btn">
                                 <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
                             </div>
-                            <a href="#" class="primary-btn">Add Car</a>
                         </div>
                     </div>
                 </div>

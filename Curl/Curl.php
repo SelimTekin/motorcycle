@@ -2,7 +2,7 @@
 
 class Curl{
 
-    public function getCurlData($make=""){    
+    public function getCurlData($make=""){ 
         
             $ch = curl_init();
         
@@ -42,7 +42,5 @@ class Curl{
         }
 
 }
-
-$curl = new Curl;
 
 ?>
