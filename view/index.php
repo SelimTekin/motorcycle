@@ -99,12 +99,12 @@
                         <nav class="header__menu">
                             <ul>
                                 <li class="active"><a href="./index.html">Home</a></li>
-                                <li><a href="./car.html">Cars</a></li>
+                                <li><a href="./car.html">Motorcycles</a></li>
                                 <li><a href="./blog.html">Blog</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="dropdown">
                                         <li><a href="./about.html">About Us</a></li>
-                                        <li><a href="./car-details.html">Car Details</a></li>
+                                        <li><a href="./car-details.html">Motorcycle Details</a></li>
                                         <li><a href="./blog-details.html">Blog Details</a></li>
                                     </ul>
                                 </li>
