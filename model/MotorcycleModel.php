@@ -94,6 +94,55 @@
             }
 
         }
+        
+        public function getYears($table=""){
+
+            $sorgu = $this->db->prepare("SELECT DISTINCT year FROM $table LIMIT 5");
+            $sorgu->execute();
+            $dataSayisi = $sorgu->rowCount();
+            $data = $sorgu->fetchAll(PDO::FETCH_ASSOC);
+
+            if($dataSayisi > 0){
+                return $data;
+            }
+            else{
+                die();
+            }
+
+        }
+
+        public function getMakes($table=""){
+
+            $sorgu = $this->db->prepare("SELECT DISTINCT make FROM $table LIMIT 5");
+            $sorgu->execute();
+            $dataSayisi = $sorgu->rowCount();
+            $data = $sorgu->fetchAll(PDO::FETCH_ASSOC);
+
+            if($dataSayisi > 0){
+                return $data;
+            }
+            else{
+                die();
+            }
+
+        }
+
+        public function getModels($table=""){
+
+            $sorgu = $this->db->prepare("SELECT DISTINCT model FROM $table LIMIT 5");
+            $sorgu->execute();
+            $dataSayisi = $sorgu->rowCount();
+            $data = $sorgu->fetchAll(PDO::FETCH_ASSOC);
+
+            if($dataSayisi > 0){
+                return $data;
+            }
+            else{
+                die();
+            }
+
+        }
+
     }
 
 ?>

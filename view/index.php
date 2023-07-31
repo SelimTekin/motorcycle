@@ -1,3 +1,31 @@
+<?php
+
+    include("../controller/IndexController.php");
+
+    $indexController = new IndexController;
+
+    $makes  = $indexController->getMakes();
+    $models = $indexController->getModels();
+    $years  = $indexController->getYears();
+
+    // echo "Makes";
+    // echo "<pre>";
+    // print_r($makes);
+    // echo "</pre>";
+    
+    // echo "Models";
+    // echo "<pre>";
+    // print_r($models);
+    // echo "</pre>";
+
+    // echo "Years";
+    // echo "<pre>";
+    // print_r($years);
+    // echo "</pre>";
+    // die();
+
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -85,114 +113,61 @@
                     <div class="hero__tab">
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Car Rental</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Buy Car</a>
+                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Find Motorcycle</a>
                             </li>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <div class="hero__tab__form">
-                                    <h2>Find Your Dream Car</h2>
+                                    <h2>Find Your Motorcycle</h2>
                                     <form>
                                         <div class="select-list">
                                             <div class="select-list-item">
-                                                <p>Select Year</p>
-                                                <select>
-                                                    <option data-display=" ">Select Year</option>
-                                                    <option value="">2020</option>
-                                                    <option value="">2019</option>
-                                                    <option value="">2018</option>
-                                                    <option value="">2017</option>
-                                                    <option value="">2016</option>
-                                                    <option value="">2015</option>
-                                                </select>
-                                            </div>
-                                            <div class="select-list-item">
-                                                <p>Select Brand</p>
+                                                <p class="text-center">Select Brand</p>
                                                 <select>
                                                     <option data-display=" ">Select Brand</option>
-                                                    <option value="">Acura</option>
+                                                    <?php foreach($makes as $make){ ?>
+                                                    <option value="<?php echo donusumleriGeriDondur($make["make"]); ?>"><?php echo donusumleriGeriDondur($make["make"]); ?></option>
+                                                    <?php } ?>
+                                                    <!-- <option value="">Acura</option>
                                                     <option value="">Audi</option>
                                                     <option value="">Bentley</option>
                                                     <option value="">BMW</option>
-                                                    <option value="">Bugatti</option>
+                                                    <option value="">Bugatti</option> -->
                                                 </select>
                                             </div>
+
+                                            
                                             <div class="select-list-item">
-                                                <p>Select Model</p>
+                                                <p class="text-center">Select Model</p>
                                                 <select>
                                                     <option data-display=" ">Select Model</option>
-                                                    <option value="">Q3</option>
+                                                    <?php foreach($models as $model){ ?>
+                                                    <option value="<?php echo donusumleriGeriDondur($model["model"]); ?>"><?php echo donusumleriGeriDondur($model["model"]); ?></option>
+                                                    <?php } ?>
+                                                    <!-- <option value="">Q3</option>
                                                     <option value="">A4 </option>
-                                                    <option value="">AVENTADOR</option>
+                                                    <option value="">AVENTADOR</option> -->
                                                 </select>
                                             </div>
-                                            <div class="select-list-item">
-                                                <p>Select Mileage</p>
-                                                <select>
-                                                    <option data-display=" ">Select Mileage</option>
-                                                    <option value="">27</option>
-                                                    <option value="">25</option>
-                                                    <option value="">15</option>
-                                                    <option value="">10</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="car-price">
-                                            <p>Price Range:</p>
-                                            <div class="price-range-wrap">
-                                                <div class="price-range"></div>
-                                                <div class="range-slider">
-                                                    <div class="price-input">
-                                                        <input type="text" id="amount">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="site-btn">Searching</button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tabs-2" role="tabpanel">
-                                <div class="hero__tab__form">
-                                    <h2>Buy Your Dream Car</h2>
-                                    <form>
-                                        <div class="select-list">
-                                            <div class="select-list-item">
-                                                <p>Select Year</p>
+
+                                            <div class="select-list-item mx-auto">
+                                                <p class="text-center">Select Year</p>
                                                 <select>
                                                     <option data-display=" ">Select Year</option>
-                                                    <option value="">2020</option>
-                                                    <option value="">2019</option>
-                                                    <option value="">2018</option>
-                                                    <option value="">2017</option>
-                                                    <option value="">2016</option>
-                                                    <option value="">2015</option>
+                                                    <?php foreach($years as $year){ ?>
+                                                    <option value="<?php echo donusumleriGeriDondur($year["year"]); ?>"><?php echo donusumleriGeriDondur($year["year"]); ?></option>
+                                                    <?php } ?>
+                                                    <!-- <option value="2020">2020</option>
+                                                    <option value="2019">2019</option>
+                                                    <option value="2018">2018</option>
+                                                    <option value="2017">2017</option>
+                                                    <option value="2016">2016</option>
+                                                    <option value="2015">2015</option> -->
                                                 </select>
                                             </div>
-                                            <div class="select-list-item">
-                                                <p>Select Brand</p>
-                                                <select>
-                                                    <option data-display=" ">Select Brand</option>
-                                                    <option value="">Acura</option>
-                                                    <option value="">Audi</option>
-                                                    <option value="">Bentley</option>
-                                                    <<option value="">BMW</option>
-                                                    <option value="">Bugatti</option>
-                                                </select>
-                                            </div>
-                                            <div class="select-list-item">
-                                                <p>Select Model</p>
-                                                <select>
-                                                    <option data-display=" ">Select Model</option>
-                                                    <option value="">Q3</option>
-                                                    <option value="">A4 </option>
-                                                    <option value="">AVENTADOR</option>
-                                                </select>
-                                            </div>
-                                            <div class="select-list-item">
+
+                                            <!-- <div class="select-list-item">
                                                 <p>Select Mileage</p>
                                                 <select>
                                                     <option data-display=" ">Select Mileage</option>
@@ -201,18 +176,7 @@
                                                     <option value="">15</option>
                                                     <option value="">10</option>
                                                 </select>
-                                            </div>
-                                        </div>
-                                        <div class="car-price">
-                                            <p>Price Range:</p>
-                                            <div class="price-range-wrap">
-                                                <div class="price-range"></div>
-                                                <div class="range-slider">
-                                                    <div class="price-input">
-                                                        <input type="text" id="amount">
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <button type="submit" class="site-btn">Searching</button>
                                     </form>
@@ -711,17 +675,6 @@
     <!-- Footer Section Begin -->
     <?php include("includes/footer.php"); ?>
     <!-- Footer Section End -->
-
-    <!-- Search Begin -->
-    <div class="search-model">
-        <div class="h-100 d-flex align-items-center justify-content-center">
-            <div class="search-close-switch">+</div>
-            <form class="search-model-form" action="SearchController" method="GET">
-                <input type="text" name="make" id="search-input" placeholder="Search here.....">
-            </form>
-        </div>
-    </div>
-    <!-- Search End -->
 
     <!-- Js Plugins -->
     <script src="../assets/js/jquery-3.3.1.min.js"></script>

@@ -13,7 +13,7 @@ class SearchController{
         $motorcycleModel = new MotorcycleModel();
         $datas = $motorcycleModel->getData("generalfeatures", $make);
         
-        include("../view/motorcycle.php");
+        include("../view/motor.php");
 
     }
 

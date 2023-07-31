@@ -39,7 +39,7 @@
             <a href="#" class="primary-btn">Add Car</a>
         </div>
         <div class="offcanvas__logo">
-            <a href="./index.php"><img src="img/logo.png" alt=""></a>
+            <a href="./index.php"><img src="../images/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <ul class="offcanvas__widget__add">
@@ -64,7 +64,7 @@
     <!-- Header Section End -->
 
     <!-- Breadcrumb End -->
-    <div class="breadcrumb-option set-bg" data-setbg="img/whitepanigale.jpg">
+    <div class="breadcrumb-option set-bg" data-setbg="../images/breadcrumb-bg.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -209,13 +209,14 @@
                         </div>
                     </div>
                     <div class="row">
+                        <?php foreach($datas as $data){ ?>
                         <div class="col-lg-4 col-md-4">
                             <div class="car__item">
-                                    <img src="img/cars/car-1.jpg" alt="">
+                                    <img src="../images/motor-icon.svg" alt="">
                                 <div class="car__item__text">
                                     <div class="car__item__text__inner">
-                                        <div class="label-date">2016</div>
-                                        <h5><a href="#">Porsche cayenne turbo s</a></h5>
+                                        <div class="label-date"><?php echo donusumleriGeriDondur($data["year"]); ?></div>
+                                        <h5><a href="#"><?php echo donusumleriGeriDondur($data["make"]); ?> <?php echo donusumleriGeriDondur($data["model"]); ?></a></h5>
                                         <ul>
                                             <li><span>35,000</span> mi</li>
                                             <li>Auto</li>
@@ -223,15 +224,16 @@
                                         </ul>
                                     </div>
                                     <div class="car__item__price text-center">
-                                        <a href="#" class="primary-btn">About</a>
+                                        <a href="#" class="primary-btn">Details</a>
 
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4">
+                        <?php } ?>
+                        <!-- <div class="col-lg-4 col-md-4">
                             <div class="car__item">
-                                    <img src="img/cars/car-2.jpg" alt="">
+                                    <img src="../images/cars/car-2.jpg" alt="">
                                 <div class="car__item__text">
                                     <div class="car__item__text__inner">
                                         <div class="label-date">2020</div>
@@ -251,7 +253,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="car__item">
-                                    <img src="img/cars/car-3.jpg" alt="">
+                                    <img src="../images/cars/car-3.jpg" alt="">
                                 <div class="car__item__text">
                                     <div class="car__item__text__inner">
                                         <div class="label-date">2017</div>
@@ -271,7 +273,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="car__item">
-                                    <img src="img/cars/car-5.jpg" alt="">
+                                    <img src="../images/cars/car-5.jpg" alt="">
                                 <div class="car__item__text">
                                     <div class="car__item__text__inner">
                                         <div class="label-date">2018</div>
@@ -291,7 +293,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="car__item">
-                                    <img src="img/cars/car-6.jpg" alt="">
+                                    <img src="../images/cars/car-6.jpg" alt="">
                                 <div class="car__item__text">
                                     <div class="car__item__text__inner">
                                         <div class="label-date">2016</div>
@@ -311,7 +313,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="car__item">
-                                    <img src="img/cars/car-4.jpg" alt="">
+                                    <img src="../images/cars/car-4.jpg" alt="">
                                 <div class="car__item__text">
                                     <div class="car__item__text__inner">
                                         <div class="label-date">2019</div>
@@ -331,7 +333,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="car__item">
-                                    <img src="img/cars/car-7.jpg" alt="">
+                                    <img src="../images/cars/car-7.jpg" alt="">
                                 <div class="car__item__text">
                                     <div class="car__item__text__inner">
                                         <div class="label-date">2020</div>
@@ -351,7 +353,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="car__item">
-                                    <img src="img/cars/car-8.jpg" alt="">
+                                    <img src="../images/cars/car-8.jpg" alt="">
                                 <div class="car__item__text">
                                     <div class="car__item__text__inner">
                                         <div class="label-date">2017</div>
@@ -371,7 +373,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="car__item">
-                                    <img src="img/cars/car-8.jpg" alt="">
+                                    <img src="../images/cars/car-8.jpg" alt="">
                                 <div class="car__item__text">
                                     <div class="car__item__text__inner">
                                         <div class="label-date">2020</div>
@@ -388,7 +390,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="pagination__option">
                         <a href="#" class="active">1</a>
@@ -406,16 +408,7 @@
     <?php include("includes/footer.php"); ?>
     <!-- Footer Section End -->
 
-    <!-- Search Begin -->
-    <div class="search-model">
-        <div class="h-100 d-flex align-items-center justify-content-center">
-            <div class="search-close-switch">+</div>
-            <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Search here.....">
-            </form>
-        </div>
-    </div>
-    <!-- Search End -->
+
 
     <!-- Js Plugins -->
     <script src="../assets/js/jquery-3.3.1.min.js"></script>
