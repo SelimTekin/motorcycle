@@ -30,34 +30,7 @@
         <div class="loader"></div>
     </div>
 
-    <!-- Offcanvas Menu Begin -->
-    <div class="offcanvas-menu-overlay"></div>
-    <div class="offcanvas-menu-wrapper">
-        <div class="offcanvas__widget">
-            <a href="#"><i class="fa fa-cart-plus"></i></a>
-            <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
-            <a href="#" class="primary-btn">Add Car</a>
-        </div>
-        <div class="offcanvas__logo">
-            <a href="./index.php"><img src="img/logo.png" alt=""></a>
-        </div>
-        <div id="mobile-menu-wrap"></div>
-        <ul class="offcanvas__widget__add">
-            <li><i class="fa fa-clock-o"></i> Week day: 08:00 am to 18:00 pm</li>
-            <li><i class="fa fa-envelope-o"></i> Info.colorlib@gmail.com</li>
-        </ul>
-        <div class="offcanvas__phone__num">
-            <i class="fa fa-phone"></i>
-            <span>(+12) 345 678 910</span>
-        </div>
-        <div class="offcanvas__social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-google"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-        </div>
-    </div>
-    <!-- Offcanvas Menu End -->
+
 
     <!-- Header Section Begin -->
     <header class="header">
@@ -104,7 +77,7 @@
                                 <li><a href="#">Pages</a>
                                     <ul class="dropdown">
                                         <li><a href="./about.html">About Us</a></li>
-                                        <li><a href="./car-details.html">Car Details</a></li>
+                                        <li><a href="./car-details.html">Motorcycle Details</a></li>
                                         <li><a href="./blog-details.html">Blog Details</a></li>
                                     </ul>
                                 </li>
@@ -117,7 +90,6 @@
                                 <a href="#"><i class="fa fa-cart-plus"></i></a>
                                 <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
                             </div>
-                            <a href="#" class="primary-btn">Add Car</a>
                         </div>
                     </div>
                 </div>
@@ -237,9 +209,6 @@
                                 <select>
                                     <option value="">Starter</option>
                                     <option value="">Electric</option>
-                                    <option value="">Blue</option>
-                                    <option value="">Black</option>
-                                    <option value="">Yellow</option>
                                 </select>
                         
                                 <div class="car__filter__btn">
@@ -263,15 +232,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="car__filter__option__item car__filter__option__item--right">
-                                    <h6>Sort By</h6>
-                                    <select>
-                                        <option value="">Price: Highest Fist</option>
-                                        <option value="">Price: Lowest Fist</option>
-                                    </select>
-                                </div>
-                            </div>
+                         
                         </div>
                     </div>
                     <div class="row">
