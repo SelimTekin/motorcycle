@@ -1,6 +1,7 @@
 <?php
 
     include("../Curl/Curl.php");
+    include("../helpers/tools_helper.php");
     
     class MotorcycleModel extends Curl{
 
@@ -28,43 +29,43 @@
                 foreach($curlDatas as $curlData){
                     $insert = $this->db->prepare("INSERT INTO $table (make, model, year, type, front_suspension, rear_suspension, front_brakes, rear_brakes, frame, dry_weight, seat_weight, total_height, total_length, total_width, ground_clearance, wheelbase, fuel_system, fuel_control, fuel_capacity, gearbox, transmission, clutch, displacement, engine, power, torque, compression, bore_stroke, valves_per_cylinder, ignition, lubrication, cooling, starter, front_wheel_travel, rear_wheel_travel, front_tire, rear_tire) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
                     $insert->execute([
-                        isset($curlData["make"]) ? $curlData["make"] : "",
-                        isset($curlData["model"]) ? $curlData["model"] : "",
-                        isset($curlData["year"]) ? $curlData["year"] : "",
-                        isset($curlData["type"]) ? $curlData["type"] : "",
-                        isset($curlData["front_suspension"]) ? $curlData["front_suspension"] : "",
-                        isset($curlData["rear_suspension"]) ? $curlData["rear_suspension"] : "",
-                        isset($curlData["front_brakes"]) ? $curlData["front_brakes"] : "",
-                        isset($curlData["rear_brakes"]) ? $curlData["rear_brakes"] : "",
-                        isset($curlData["frame"]) ? $curlData["frame"] : "",
-                        isset($curlData["dry_weight"]) ? $curlData["dry_weight"] : "",
-                        isset($curlData["seat_weight"]) ? $curlData["seat_weight"] : "",
-                        isset($curlData["total_height"]) ? $curlData["total_height"] : "",
-                        isset($curlData["total_length"]) ? $curlData["total_length"] : "",
-                        isset($curlData["total_width"]) ? $curlData["total_width"] : "",
-                        isset($curlData["ground_clearance"]) ? $curlData["ground_clearance"] : "",
-                        isset($curlData["wheelbase"]) ? $curlData["wheelbase"] : "",
-                        isset($curlData["fuel_system"]) ? $curlData["fuel_system"] : "",
-                        isset($curlData["fuel_control"]) ? $curlData["fuel_control"] : "",
-                        isset($curlData["fuel_capacity"]) ? $curlData["fuel_capacity"] : "",
-                        isset($curlData["gearbox"]) ? $curlData["gearbox"] : "",
-                        isset($curlData["transmission"]) ? $curlData["transmission"] : "",
-                        isset($curlData["clutch"]) ? $curlData["clutch"] : "",
-                        isset($curlData["displacement"]) ? $curlData["displacement"] : "",
-                        isset($curlData["engine"]) ? $curlData["engine"] : "",
-                        isset($curlData["power"]) ? $curlData["power"] : "",
-                        isset($curlData["torque"]) ? $curlData["torque"] : "",
-                        isset($curlData["compression"]) ? $curlData["compression"] : "",
-                        isset($curlData["bore_stroke"]) ? $curlData["bore_stroke"] : "",
-                        isset($curlData["valves_per_cylinder"]) ? $curlData["valves_per_cylinder"] : "",
-                        isset($curlData["ignition"]) ? $curlData["ignition"] : "",
-                        isset($curlData["lubrication"]) ? $curlData["lubrication"] : "",
-                        isset($curlData["cooling"]) ? $curlData["cooling"] : "",
-                        isset($curlData["starter"]) ? $curlData["starter"] : "",
-                        isset($curlData["front_wheel_travel"]) ? $curlData["front_wheel_travel"] : "",
-                        isset($curlData["rear_wheel_travel"]) ? $curlData["rear_wheel_travel"] : "",
-                        isset($curlData["front_tire"]) ? $curlData["front_tire"] : "",
-                        isset($curlData["rear_tire"]) ? $curlData["rear_tire"] : ""
+                        isset($curlData["make"]) ? guvenlik($curlData["make"]) : "",
+                        isset($curlData["model"]) ? guvenlik($curlData["model"]) : "",
+                        isset($curlData["year"]) ? guvenlik($curlData["year"]) : "",
+                        isset($curlData["type"]) ? guvenlik($curlData["type"]) : "",
+                        isset($curlData["front_suspension"]) ? guvenlik($curlData["front_suspension"]) : "",
+                        isset($curlData["rear_suspension"]) ? guvenlik($curlData["rear_suspension"]) : "",
+                        isset($curlData["front_brakes"]) ? guvenlik($curlData["front_brakes"]) : "",
+                        isset($curlData["rear_brakes"]) ? guvenlik($curlData["rear_brakes"]) : "",
+                        isset($curlData["frame"]) ? guvenlik($curlData["frame"]) : "",
+                        isset($curlData["dry_weight"]) ? guvenlik($curlData["dry_weight"]) : "",
+                        isset($curlData["seat_weight"]) ? guvenlik($curlData["seat_weight"]) : "",
+                        isset($curlData["total_height"]) ? guvenlik($curlData["total_height"]) : "",
+                        isset($curlData["total_length"]) ? guvenlik($curlData["total_length"]) : "",
+                        isset($curlData["total_width"]) ? guvenlik($curlData["total_width"]) : "",
+                        isset($curlData["ground_clearance"]) ? guvenlik($curlData["ground_clearance"]) : "",
+                        isset($curlData["wheelbase"]) ? guvenlik($curlData["wheelbase"]) : "",
+                        isset($curlData["fuel_system"]) ? guvenlik($curlData["fuel_system"]) : "",
+                        isset($curlData["fuel_control"]) ? guvenlik($curlData["fuel_control"]) : "",
+                        isset($curlData["fuel_capacity"]) ? guvenlik($curlData["fuel_capacity"]) : "",
+                        isset($curlData["gearbox"]) ? guvenlik($curlData["gearbox"]) : "",
+                        isset($curlData["transmission"]) ? guvenlik($curlData["transmission"]) : "",
+                        isset($curlData["clutch"]) ? guvenlik($curlData["clutch"]) : "",
+                        isset($curlData["displacement"]) ? guvenlik($curlData["displacement"]) : "",
+                        isset($curlData["engine"]) ? guvenlik($curlData["engine"]) : "",
+                        isset($curlData["power"]) ? guvenlik($curlData["power"]) : "",
+                        isset($curlData["torque"]) ? guvenlik($curlData["torque"]) : "",
+                        isset($curlData["compression"]) ? guvenlik($curlData["compression"]) : "",
+                        isset($curlData["bore_stroke"]) ? guvenlik($curlData["bore_stroke"]) : "",
+                        isset($curlData["valves_per_cylinder"]) ? guvenlik($curlData["valves_per_cylinder"]) : "",
+                        isset($curlData["ignition"]) ? guvenlik($curlData["ignition"]) : "",
+                        isset($curlData["lubrication"]) ? guvenlik($curlData["lubrication"]) : "",
+                        isset($curlData["cooling"]) ? guvenlik($curlData["cooling"]) : "",
+                        isset($curlData["starter"]) ? guvenlik($curlData["starter"]) : "",
+                        isset($curlData["front_wheel_travel"]) ? guvenlik($curlData["front_wheel_travel"]) : "",
+                        isset($curlData["rear_wheel_travel"]) ? guvenlik($curlData["rear_wheel_travel"]) : "",
+                        isset($curlData["front_tire"]) ? guvenlik($curlData["front_tire"]) : "",
+                        isset($curlData["rear_tire"]) ? guvenlik($curlData["rear_tire"]) : ""
                     ]);
 
                     $datas = $sorgu->fetchAll(PDO::FETCH_ASSOC);
