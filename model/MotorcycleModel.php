@@ -6,6 +6,15 @@
 
         public $db = "";
 
+        public $gelenSayfalama = "";
+
+        public $sayfalamaIcinSolVeSagButonSayisi   = 2; // 3. sayfadaysak yanlarında 1 2 ve 4 5 yazacak
+        public $sayfaBasinaGosterilecekKayitSayisi = 6;
+    
+        public $sayfalamayaBaslanacakKayitSayisi   = 0;
+
+        public $bulunanSayfaSayisi                 = 0;
+
         public function __construct(){
             try{
                 $this->db = new PDO("mysql:host=localhost;dbname=motorcycle;charset=UTF8", "root", "");
@@ -15,8 +24,66 @@
             }
         }
 
+        public function getAllData($table=""){
+
+            $sorgu = $this->db->prepare("SELECT * FROM $table");
+            $sorgu->execute();
+            $dataSayisi = $sorgu->rowCount();
+            $data = $sorgu->fetchAll(PDO::FETCH_ASSOC);
+
+            if($dataSayisi > 0){
+                return $data;
+            }
+            else{
+                die();
+            }
+
+        }
+
+        public function getOneData($table="", $id=-1){
+
+            if($id != -1){
+                $sorgu = $this->db->prepare("SELECT * FROM $table WHERE id=$id");
+                $sorgu->execute();
+                $dataSayisi = $sorgu->rowCount();
+                $data = $sorgu->fetch(PDO::FETCH_ASSOC);
+
+                if($dataSayisi > 0){
+                    return $data;
+                }
+                else{
+                    die("No information");
+                }
+            }
+            else{
+                die("No information");
+            }
+
+        }
+
         public function getData($table="", $make=""){
-            $sorgu = $this->db->prepare("SELECT * FROM $table WHERE make='$make'");
+
+            $this->gelenSayfalama = isset($_REQUEST["sayfalama"]) ? guvenlik($_REQUEST["sayfalama"]) : 1;
+            $this->sayfalamayaBaslanacakKayitSayisi   = ($this->gelenSayfalama * $this->sayfaBasinaGosterilecekKayitSayisi) - $this->sayfaBasinaGosterilecekKayitSayisi; // (1 * 5) - 5 -> yani Aşağıdaki sorguda LIMIT bu değişkenin değerinden başlayıp 5 tane kayıt getirecek
+            $toplamKayitSayisiSorgu             = $this->db->prepare("SELECT * FROM generalfeatures WHERE make='$make'");
+            $toplamKayitSayisiSorgu->execute();
+            $toplamKayitSayisi = $toplamKayitSayisiSorgu->rowCount();
+            $bulunanSayfaSayisi                 = ceil($toplamKayitSayisi / $this->sayfaBasinaGosterilecekKayitSayisi); // sonuç virgüllü çıkarsa yukarı yuvarlar
+
+            $sayfalamaArray = array(
+                "gelenSayfalama"                     => $this->gelenSayfalama,
+                "sayfalamaIcinSolVeSagButonSayisi"   => $this->sayfalamaIcinSolVeSagButonSayisi,
+                "sayfaBasinaGosterilecekKayitSayisi" => $this->sayfaBasinaGosterilecekKayitSayisi,
+                "toplamKayitSayisiSorgu"             => $toplamKayitSayisiSorgu,
+                "sayfalamayaBaslanacakKayitSayisi"   => $this->sayfalamayaBaslanacakKayitSayisi,
+                "sayfaBasinaGosterilecekKayitSayisi" => $this->sayfaBasinaGosterilecekKayitSayisi,
+                "bulunanSayfaSayisi"                 => $bulunanSayfaSayisi
+            );
+
+            $sql = "SELECT * FROM $table WHERE make='$make' LIMIT " .  $sayfalamaArray['sayfalamayaBaslanacakKayitSayisi'] . "," .  $sayfalamaArray['sayfaBasinaGosterilecekKayitSayisi'];
+
+            // $sorgu = $this->db->prepare("SELECT * FROM $table WHERE make='$make'");
+            $sorgu = $this->db->prepare($sql);
             $sorgu->execute();
             $dataSayisi = $sorgu->rowCount();
 
@@ -73,14 +140,84 @@
             }
 
             $datas = $sorgu->fetchAll(PDO::FETCH_ASSOC);
-
+            $datas["sayfalamaArray"] = $sayfalamaArray;
+    
             return $datas;
 
         }
 
-        public function getAllData($table=""){
+        public function getRandomData($table=""){
+            $this->sayfaBasinaGosterilecekKayitSayisi = isset($_POST["showOnPage"]) ? $_POST["showOnPage"] : 6;
+            // $sorgu = $this->db->prepare("SELECT * FROM $table ORDER BY RAND() LIMIT 9");
+            $this->gelenSayfalama = isset($_REQUEST["sayfalama"]) ? guvenlik($_REQUEST["sayfalama"]) : 1;
+            $this->sayfalamayaBaslanacakKayitSayisi   = ($this->gelenSayfalama * $this->sayfaBasinaGosterilecekKayitSayisi) - $this->sayfaBasinaGosterilecekKayitSayisi;
+            $toplamKayitSayisiSorgu             = $this->db->prepare("SELECT * FROM $table ORDER BY RAND()");
+            $toplamKayitSayisiSorgu->execute();
+            $toplamKayitSayisi = $toplamKayitSayisiSorgu->rowCount();
+            $bulunanSayfaSayisi                 = ceil($toplamKayitSayisi / $this->sayfaBasinaGosterilecekKayitSayisi);
 
-            $sorgu = $this->db->prepare("SELECT * FROM $table");
+            $sayfalamaArray = array(
+                "gelenSayfalama"                     => $this->gelenSayfalama,
+                "sayfalamaIcinSolVeSagButonSayisi"   => $this->sayfalamaIcinSolVeSagButonSayisi,
+                "sayfaBasinaGosterilecekKayitSayisi" => $this->sayfaBasinaGosterilecekKayitSayisi,
+                "toplamKayitSayisiSorgu"             => $toplamKayitSayisiSorgu,
+                "sayfalamayaBaslanacakKayitSayisi"   => $this->sayfalamayaBaslanacakKayitSayisi,
+                "sayfaBasinaGosterilecekKayitSayisi" => $this->sayfaBasinaGosterilecekKayitSayisi,
+                "bulunanSayfaSayisi"                 => $bulunanSayfaSayisi
+            );
+
+            $sql = "SELECT * FROM $table ORDER BY RAND() LIMIT " .  $sayfalamaArray['sayfalamayaBaslanacakKayitSayisi'] . "," .  $sayfalamaArray['sayfaBasinaGosterilecekKayitSayisi'];
+
+            $sorgu = $this->db->prepare($sql);
+            $sorgu->execute();
+            $dataSayisi = $sorgu->rowCount();
+            $data = $sorgu->fetchAll(PDO::FETCH_ASSOC);
+
+            $data["sayfalamaArray"] = $sayfalamaArray;
+
+            if($dataSayisi > 0){
+                return $data;
+            }
+            else{
+                die();
+            }
+
+        }
+
+        public function getFilteredData($table="", $where=""){
+
+            $this->gelenSayfalama = isset($_REQUEST["sayfalama"]) ? guvenlik($_REQUEST["sayfalama"]) : 1;
+            $this->sayfalamayaBaslanacakKayitSayisi   = ($this->gelenSayfalama * $this->sayfaBasinaGosterilecekKayitSayisi) - $this->sayfaBasinaGosterilecekKayitSayisi; // (1 * 5) - 5 -> yani Aşağıdaki sorguda LIMIT bu değişkenin değerinden başlayıp 5 tane kayıt getirecek
+            $toplamKayitSayisiSorgu             = $this->db->prepare("SELECT * FROM generalfeatures WHERE $where");
+            $toplamKayitSayisiSorgu->execute();
+            $toplamKayitSayisi = $toplamKayitSayisiSorgu->rowCount();
+            $bulunanSayfaSayisi                 = ceil($toplamKayitSayisi / $this->sayfaBasinaGosterilecekKayitSayisi); // sonuç virgüllü çıkarsa yukarı yuvarlar
+
+            $sayfalamaArray = array(
+                "gelenSayfalama"                     => $this->gelenSayfalama,
+                "sayfalamaIcinSolVeSagButonSayisi"   => $this->sayfalamaIcinSolVeSagButonSayisi,
+                "sayfaBasinaGosterilecekKayitSayisi" => $this->sayfaBasinaGosterilecekKayitSayisi,
+                "toplamKayitSayisiSorgu"             => $toplamKayitSayisiSorgu,
+                "sayfalamayaBaslanacakKayitSayisi"   => $this->sayfalamayaBaslanacakKayitSayisi,
+                "sayfaBasinaGosterilecekKayitSayisi" => $this->sayfaBasinaGosterilecekKayitSayisi,
+                "bulunanSayfaSayisi"                 => $bulunanSayfaSayisi
+            );
+
+            $sql = "SELECT * FROM $table WHERE $where ORDER BY RAND() LIMIT " .  $sayfalamaArray['sayfalamayaBaslanacakKayitSayisi'] . "," .  $sayfalamaArray['sayfaBasinaGosterilecekKayitSayisi'];
+            $sorgu = $this->db->prepare($sql);
+            $sorgu->execute();
+            $dataSayisi = $sorgu->rowCount();
+            $datas = $sorgu->fetchAll(PDO::FETCH_ASSOC);
+            $datas["sayfalamaArray"] = $sayfalamaArray;
+
+            $datas["where"] = $where;
+
+            return $datas;
+        }
+
+        public function getMakes(){
+
+            $sorgu = $this->db->prepare("SELECT DISTINCT make FROM generalfeatures WHERE NOT make='' ");
             $sorgu->execute();
             $dataSayisi = $sorgu->rowCount();
             $data = $sorgu->fetchAll(PDO::FETCH_ASSOC);
@@ -94,8 +231,9 @@
 
         }
 
-        public function getRandomData($table=""){
-            $sorgu = $this->db->prepare("SELECT * FROM $table ORDER BY RAND() LIMIT 9");
+        public function getModels(){
+
+            $sorgu = $this->db->prepare("SELECT DISTINCT model FROM generalfeatures WHERE NOT model='' ");
             $sorgu->execute();
             $dataSayisi = $sorgu->rowCount();
             $data = $sorgu->fetchAll(PDO::FETCH_ASSOC);
@@ -109,9 +247,9 @@
 
         }
         
-        public function getYears($table=""){
+        public function getYears(){
 
-            $sorgu = $this->db->prepare("SELECT DISTINCT year FROM $table LIMIT 5");
+            $sorgu = $this->db->prepare("SELECT DISTINCT year FROM generalfeatures WHERE NOT year='' ");
             $sorgu->execute();
             $dataSayisi = $sorgu->rowCount();
             $data = $sorgu->fetchAll(PDO::FETCH_ASSOC);
@@ -125,9 +263,9 @@
 
         }
 
-        public function getMakes($table=""){
+        public function getTypes(){
 
-            $sorgu = $this->db->prepare("SELECT DISTINCT make FROM $table LIMIT 5");
+            $sorgu = $this->db->prepare("SELECT DISTINCT type FROM generalfeatures WHERE NOT type='' ");
             $sorgu->execute();
             $dataSayisi = $sorgu->rowCount();
             $data = $sorgu->fetchAll(PDO::FETCH_ASSOC);
@@ -141,9 +279,9 @@
 
         }
 
-        public function getModels($table=""){
+        public function getTransmissions(){
 
-            $sorgu = $this->db->prepare("SELECT DISTINCT model FROM $table LIMIT 5");
+            $sorgu = $this->db->prepare("SELECT DISTINCT transmission FROM generalfeatures WHERE NOT transmission='' ");
             $sorgu->execute();
             $dataSayisi = $sorgu->rowCount();
             $data = $sorgu->fetchAll(PDO::FETCH_ASSOC);
@@ -155,6 +293,52 @@
                 die();
             }
 
+        }
+
+        public function getCoolings(){
+
+            $sorgu = $this->db->prepare("SELECT DISTINCT cooling FROM generalfeatures WHERE NOT cooling='' ");
+            $sorgu->execute();
+            $dataSayisi = $sorgu->rowCount();
+            $data = $sorgu->fetchAll(PDO::FETCH_ASSOC);
+
+            if($dataSayisi > 0){
+                return $data;
+            }
+            else{
+                die();
+            }
+
+        }
+
+        public function getStarters(){
+
+            $sorgu = $this->db->prepare("SELECT DISTINCT starter FROM generalfeatures WHERE NOT starter='' ");
+            $sorgu->execute();
+            $dataSayisi = $sorgu->rowCount();
+            $data = $sorgu->fetchAll(PDO::FETCH_ASSOC);
+
+            if($dataSayisi > 0){
+                return $data;
+            }
+            else{
+                die();
+            }
+
+        }
+
+        public function getBrakeFeatures($id = -1){
+            $sorgu = $this->db->prepare("SELECT DISTINCT starter FROM generalfeatures WHERE NOT starter='' ");
+            $sorgu->execute();
+            $dataSayisi = $sorgu->rowCount();
+            $data = $sorgu->fetchAll(PDO::FETCH_ASSOC);
+
+            if($dataSayisi > 0){
+                return $data;
+            }
+            else{
+                die();
+            }
         }
 
     }

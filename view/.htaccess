@@ -1,5 +1,3 @@
 RewriteEngine On
 
-RewriteRule ^SearchController$ ../controller/SearchController.php [L,NC]
-
-RewriteRule ^motorcycle$ ../view/motorcycle.php [L,NC]
+RewriteRule ^motor$ index.php?sk=1 [L,NC]

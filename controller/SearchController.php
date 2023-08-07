@@ -1,38 +1,69 @@
 <?php
 
-include("../helpers/tools_helper.php");
-
-class SearchController{
-
+class SearchController extends MotorcycleModel{
 
     public function processData(){
 
-        include("../model/MotorcycleModel.php");
-
-        $motorcycleModel = new MotorcycleModel();
-
-
-        if(!empty($_GET)){
-            $make = guvenlik($_GET["make"]);
-
-            $datas = $motorcycleModel->getData("generalfeatures", $make);
-            
-            include("../view/motor.php");
+        if(!empty($_REQUEST) && isset($_REQUEST["make"])){
+            $make = guvenlik($_REQUEST["make"]);
+            $datas = $this->getData("generalfeatures", $make);
+            $datas["make"] = $make;
         }
         else{
-            $datas = $motorcycleModel->getRandomData("generalfeatures");
-
-            include("../view/motor.php");
-
+            $datas = $this->getRandomData("generalfeatures");
         }
 
+        return $datas;
 
     }
 
+    public function processFilteredData(){
+        
+        if(!empty($_REQUEST) && isset($_REQUEST["features"])){
+
+            $features = $_REQUEST["features"];
+
+            $where = "";
+            foreach($features as $key=>$value){
+                if($value != "")
+                    $where .= "$key='$value' AND ";
+            }
+            $where = rtrim($where, " AND ");
+
+            $datas = $this->getFilteredData("generalfeatures", $where);
+
+        }
+        else if(!empty($_GET)){
+
+            $features = $_GET;
+
+            $where = "";
+            foreach($features as $key=>$value){
+                if($value != "" && $key != "sk" && $key != "sayfalama")
+                    $where .= "$key='$value' AND ";
+            }
+            $where = rtrim($where, " AND ");
+            
+            $datas = $this->getFilteredData("generalfeatures", $where);
+        }
+        else{
+            $datas = $this->getRandomData("generalfeatures");
+        }
+
+        return $datas;
+
+    }
+
+    public function processMotorDetail(){
+
+        if(isset($_GET["id"])){
+            return $this->getOneData("generalfeatures", guvenlik($_GET["id"]));
+        }
+        else{
+            return header("Location: index.php");
+        }
+    }
+
 }
-
-$search = new SearchController();
-
-$search->processData();
 
 ?>

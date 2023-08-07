@@ -1,34 +1,34 @@
 <?php
 
-    include("../helpers/tools_helper.php");
+    class IndexController extends MotorcycleModel{   
 
-    class IndexController{
+        // public function getMakes(){
+        //     return $this->motorcycle->getMakes("generalfeatures");
+        // }
 
-        public function __construct()
-        {
-            include("../model/MotorcycleModel.php");
-        }
+        // public function getModels(){
+        //     return $this->motorcycle->getModels("generalfeatures");
+        // }
 
-        public function getMakes(){
-            $motorcycle = new MotorcycleModel;
-            $makes = $motorcycle->getMakes("generalfeatures");
+        // public function getYears(){
+        //     return $this->motorcycle->getYears("generalfeatures");
+        // }
 
-            return $makes;
-        }
+        // public function getTypes(){
+        //     return $this->motorcycle->getTypes("generalfeatures");
+        // }
 
-        public function getModels(){
-            $motorcycle = new MotorcycleModel;
-            $models = $motorcycle->getModels("generalfeatures");
+        // public function getTransmissions(){
+        //     return $this->motorcycle->getTransmissions("generalfeatures");
+        // }
 
-            return $models;
-        }
+        // public function getCoolings(){
+        //     return $this->motorcycle->getCoolings("generalfeatures");
+        // }
 
-        public function getYears(){
-            $motorcycle = new MotorcycleModel;
-            $years = $motorcycle->getYears("generalfeatures");
-
-            return $years;
-        }
+        // public function getStarters(){
+        //     return $this->motorcycle->getStarters("generalfeatures");
+        // }
 
     }
 

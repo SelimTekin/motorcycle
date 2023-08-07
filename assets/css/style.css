@@ -315,6 +315,12 @@ ol {
 	justify-content: center;
 }
 
+button.search-switch{
+ border: none;
+ outline: none;
+ background-color: transparent;
+}
+
 i.fa-search{
 	font-weight: 600;
 	font-size: 20px;
